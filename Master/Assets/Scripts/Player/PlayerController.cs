@@ -14,22 +14,18 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     private Vector3 speed;
     private Collider crouchCollider;
-    private SpriteRenderer spriteRenderer;
 
     private float inputX;
     private float inputZ;
     private float speedBackup;
     private bool isLookingRight;
     public bool isCrouching;
-    public AnimationCurve anim;
     private float time;
     public float timeToAddDrunk = 1.25f;
-    private float multiplier = 1;
+    public int walkingSpeed;
 
     void Start()
     {
-        //animator = GetComponent<Animator>();
-        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         rb = GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
 
@@ -39,7 +35,7 @@ public class PlayerController : MonoBehaviour
     private void Move()
     {
         speed = new Vector3(inputX * AccelerationSpeed, rb.velocity.y, inputZ * AccelerationSpeed);
-        rb.AddForce(speed * 0.6f);
+        rb.AddForce(speed.normalized * walkingSpeed);
         rb.velocity = new Vector3(Mathf.Clamp(rb.velocity.x, -2.5f,2.5f ),0, Mathf.Clamp(rb.velocity.z,-2.5f,2.5f));
         //rb.velocity = 0.1f * speed * current;
     }
@@ -75,15 +71,6 @@ public class PlayerController : MonoBehaviour
     {
         inputX = Input.GetAxisRaw("Horizontal");
         inputZ = Input.GetAxisRaw("Vertical");
-
-        if (Math.Abs(inputX) > 0.001f && Math.Abs(inputZ) > 0.001f)
-        {
-            multiplier = Mathf.Sqrt(2);
-        }
-        else
-        {
-            multiplier = 1;
-        }
 
         //ChangeDirection();
 
