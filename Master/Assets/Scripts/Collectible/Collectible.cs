@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Collectible : MonoBehaviour
+public abstract class Collectible : MonoBehaviour
 {
     private GameObject player;
     private Collider col;
@@ -10,7 +10,7 @@ public class Collectible : MonoBehaviour
     void Start()
     {
         player = FindObjectOfType<PlayerController>().gameObject;
-        col = player.GetComponent<BoxCollider>();
+        col = player.GetComponent<CapsuleCollider>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -21,8 +21,5 @@ public class Collectible : MonoBehaviour
         }
     }
 
-    private void PickUp()
-    {
-        Destroy(gameObject);
-    }
+    public abstract void PickUp();
 }
