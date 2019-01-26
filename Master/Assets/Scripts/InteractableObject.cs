@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class InteractableObject : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private GameObject player;
+    private Collider col;
+
     void Start()
     {
-        
+        player = FindObjectOfType<PlayerController>().gameObject;
+        col = player.GetComponent<BoxCollider>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerStay(Collider other)
     {
-        
+        if (other.Equals(col))
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Interact();
+            }
+        }
+    }
+
+    private void Interact()
+    {
+        Debug.Log("Interacting...");
     }
 }
