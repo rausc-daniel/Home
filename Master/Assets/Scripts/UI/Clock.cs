@@ -53,8 +53,6 @@ public class Clock : MonoBehaviour
         if (Current.CurrentHour == 12)
             Current.CurrentHour = 0;
 
-        Debug.Log(Current.CurrentHour + ":" + Current.CurrentMinute);
-
         yield return StartCoroutine(Hour());
     }
 }
