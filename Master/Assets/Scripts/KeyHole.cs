@@ -16,7 +16,7 @@ public class KeyHole : FillingBar
         timer += Time.deltaTime;
         Vector3 dis = key.transform.position - transform.position;
 
-        if (dis.magnitude <= 0.45f)
+        if (dis.magnitude <= 0.1f)
         {
             Bar.fillAmount += 1f * Time.deltaTime;
         }
@@ -26,7 +26,7 @@ public class KeyHole : FillingBar
         {
             Debug.Log("Attempting to open door");
             timer = 0f;
-            if (dis.magnitude <= 0.45f && Bar.fillAmount == 1f)
+            if (dis.magnitude <= 0.1f && Bar.fillAmount == 1f)
             {
                 Debug.Log("Door opened Bitch");
             }
