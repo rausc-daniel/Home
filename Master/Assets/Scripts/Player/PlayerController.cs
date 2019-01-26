@@ -104,7 +104,7 @@ public class PlayerController : MonoBehaviour
 
         while (progress < 1f)
         {
-            Vector3 lerpVec = Vector3.Lerp(new Vector3(transform.position.x, 0, transform.position.z), new Vector3(drunkVector.x - transform.position.x, 0, drunkVector.z -transform.position.z), progress) / 200;
+            Vector3 lerpVec = Vector3.Lerp(new Vector3(transform.position.x, 0, transform.position.z), new Vector3(drunkVector.x - transform.position.x, 0, drunkVector.z -transform.position.z), progress) / 100;
             rb.velocity += new Vector3(lerpVec.x, 0, lerpVec.z)  ;
             t += Time.deltaTime;
             progress = t;
