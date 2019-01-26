@@ -1,11 +1,7 @@
-﻿public struct CurrentTime
-{
-    public int CurrentHour;
-    public int CurrentMinute;
+﻿using UnityEngine;
 
-    public CurrentTime(int hour, int minute)
-    {
-        CurrentHour = hour;
-        CurrentMinute = minute;
-    }
+public static class CurrentTime
+{
+    public static int CurrentHour;
+    public static int CurrentMinute;
 }

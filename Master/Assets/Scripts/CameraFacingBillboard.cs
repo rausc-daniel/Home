@@ -2,7 +2,12 @@
 
 public class CameraFacingBillboard : MonoBehaviour
 {
-    public Camera camera;
+    private Camera camera;
+
+    void Start()
+    {
+        camera = Camera.main;
+    }
 
     void LateUpdate()
     {
