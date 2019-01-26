@@ -6,8 +6,8 @@ public class CameraFollower : MonoBehaviour
 {
     public Transform Target;
     [Range (-5, 5)] public float offsetX;
-    public float offsetY;
-    [Range (-10, 0)] public float offsetZ;
+    [Range (-10, 10)] public float offsetY;
+    [Range (-20, 0)] public float offsetZ;
     [Range (0, 1)] public float TimeToReach;
 
     private Vector3 offset;
