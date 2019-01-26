@@ -9,5 +9,6 @@ public abstract class FillingBar : MonoBehaviour
     private void Start()
     {
         Bar.fillAmount = StartFill;
+        Debug.Log(StartFill);
     }
 }
