@@ -44,19 +44,19 @@ public class PlayerController : MonoBehaviour
         //rb.velocity = 0.1f * speed * current;
     }
 
-    private void ChangeDirection()
-    {
-        isLookingRight = !isLookingRight;
+    //private void ChangeDirection()
+    //{
+    //    isLookingRight = !isLookingRight;
 
-        if (isLookingRight && inputX > 0)
-        {
-            spriteRenderer.flipX = false;
-        }
-        else if (!isLookingRight && inputX < 0)
-        {
-            spriteRenderer.flipX = true;
-        }
-    }
+    //    if (isLookingRight && inputX > 0)
+    //    {
+    //        spriteRenderer.flipX = false;
+    //    }
+    //    else if (!isLookingRight && inputX < 0)
+    //    {
+    //        spriteRenderer.flipX = true;
+    //    }
+    //}
 
     private void Crouch()
     {
@@ -85,7 +85,7 @@ public class PlayerController : MonoBehaviour
             multiplier = 1;
         }
 
-        ChangeDirection();
+        //ChangeDirection();
 
         if (Input.GetKeyDown(KeyCode.C) || Input.GetKeyUp(KeyCode.C))
         {

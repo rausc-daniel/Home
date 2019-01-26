@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class KeyMover : FillingBar
@@ -20,7 +19,6 @@ public class KeyMover : FillingBar
     float timeToAddDrunk = 0f;
     IEnumerator drunk;
 
-    // Start is called before the first frame update
     void Start()
     {
         Camera cam = Camera.main;
@@ -30,7 +28,6 @@ public class KeyMover : FillingBar
         StartFill = 0.1f;
     }
 
-    // Update is called once per frame
     void Update()
     {        
         if (succeeded)
