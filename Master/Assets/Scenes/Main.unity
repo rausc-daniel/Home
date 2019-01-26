@@ -172,28 +172,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &963849257 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1433343326342013131, guid: ea71ae6f1d532aa49a61ee7119c42dab,
-    type: 3}
-  m_PrefabInstance: {fileID: 1433343325975342417}
-  m_PrefabAsset: {fileID: 0}
---- !u!208 &963849258
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963849257}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 18.2, y: 2.45, z: 0.07}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1302278335
 GameObject:
   m_ObjectHideFlags: 0
