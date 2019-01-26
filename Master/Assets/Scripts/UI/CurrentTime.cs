@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-public struct CurrentTime
+﻿public struct CurrentTime
 {
     public int CurrentHour;
     public int CurrentMinute;
