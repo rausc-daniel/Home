@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [Range (0, 10)] public float AccelerationSpeed;
-    [Range (0, 5)] public float MaxGroundSpeed;
+    [Range (0, 15)] public float AccelerationSpeed;
+    [Range (0, 10)] public float MaxGroundSpeed;
 
     private Animator animator;
     private Rigidbody rb;
