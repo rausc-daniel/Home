@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
     {
         speed = new Vector3(inputX * AccelerationSpeed, rb.velocity.y, inputZ * AccelerationSpeed);
         rb.AddForce(speed.normalized * walkingSpeed);
-        rb.velocity = new Vector3(Mathf.Clamp(rb.velocity.x, -2.5f,2.5f ),0, Mathf.Clamp(rb.velocity.z,-2.5f,2.5f));
+        //rb.velocity = new Vector3(Mathf.Clamp(rb.velocity.x, -2.5f,2.5f ),0, Mathf.Clamp(rb.velocity.z,-2.5f,2.5f));
         //rb.velocity = 0.1f * speed * current;
     }
 
