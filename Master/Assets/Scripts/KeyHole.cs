@@ -3,19 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class KeyHole : MonoBehaviour
+public class KeyHole : FillingBar
 {
     public GameObject key;
-    public Image progressBar;
-
     public float cooldown;
     private float timer;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -23,16 +16,21 @@ public class KeyHole : MonoBehaviour
         timer += Time.deltaTime;
         Vector3 dis = key.transform.position - transform.position;
 
-        
-        if(Input.GetMouseButton(0) && timer >= cooldown)
+        if (dis.magnitude <= 0.45f)
+        {
+            Bar.fillAmount += 1f * Time.deltaTime;
+        }
+        else Bar.fillAmount -= 0.5f * Time.deltaTime;
+
+        if (Input.GetMouseButton(0) && timer >= cooldown)
         {
             Debug.Log("Attempting to open door");
             timer = 0f;
-            if (dis.magnitude <= 0.45f)
+            if (dis.magnitude <= 0.45f && Bar.fillAmount == 1f)
             {
-                Debug.Log("Treffer");
+                Debug.Log("Door opened Bitch");
             }
-            else Debug.Log("Fail");
+            else Debug.Log("You suck");
         }
     }
 }
