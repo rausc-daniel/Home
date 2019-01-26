@@ -16,13 +16,13 @@ public class PlayerController : MonoBehaviour
     private float inputX;
     private float inputZ;
     private float speedBackup;
-    private bool isCrouching;
+    public bool isCrouching;
 
     void Start()
     {
         //animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
-        rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+        rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
 
         speedBackup = AccelerationSpeed;
     }
