@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
     private void Move()
     {
         speed = new Vector3(inputX * AccelerationSpeed, rb.velocity.y, inputZ * AccelerationSpeed);
-        rb.AddForce(speed, ForceMode.Acceleration);
+        rb.AddForce(speed);
     }
 
     void Update()
