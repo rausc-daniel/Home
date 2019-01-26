@@ -7,6 +7,11 @@ public class PukeBar : FillingBar
     private void Update()
     {
         Bar.fillAmount += FillPerFrame;
+
+        if (Bar.fillAmount >= 1)
+        {
+            // Penis
+        }
     }
 
     public void ChangeFillAmout(float amount)

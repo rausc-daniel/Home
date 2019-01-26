@@ -1,13 +1,7 @@
 ﻿using UnityEngine;
 
-public struct CurrentTime
+public static class CurrentTime
 {
-    public int CurrentHour;
-    public int CurrentMinute;
-
-    public CurrentTime(int hour, int minute)
-    {
-        CurrentHour = hour;
-        CurrentMinute = minute;
-    }
+    public static int CurrentHour;
+    public static int CurrentMinute;
 }
