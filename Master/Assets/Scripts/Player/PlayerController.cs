@@ -7,8 +7,8 @@ public class PlayerController : MonoBehaviour
     [Range (0, 15)] public float AccelerationSpeed;
     [Range (0, 10)] public float MaxGroundSpeed;
     [Range (0, 10)] public float CrouchSpeed;
+    [Range (0, 100)] public float Drunkness;
 
-    private Animator animator;
     private Rigidbody rb;
     private Vector3 speed;
     private Collider crouchCollider;
