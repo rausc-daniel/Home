@@ -710,9 +710,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f26a55b9f23148748b9f1c3d1147f971, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Target: {fileID: 1627296699}
+  m_Name:
+  m_EditorClassIdentifier:
+  Target: {fileID: 1636295833}
   offsetX: 0
   offsetY: 3
   offsetZ: -10
@@ -983,8 +983,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ecf385542d966f498314f559901c55e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   AccelerationSpeed: 15
   MaxGroundSpeed: 3
   CrouchSpeed: 2
@@ -1349,7 +1349,7 @@ PrefabInstance:
     - target: {fileID: 1433343326343953951, guid: ea71ae6f1d532aa49a61ee7119c42dab,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
-      value: 
+      value:
       objectReference: {fileID: 2100000, guid: d51786617d5e7c248836b77f143a2c9e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea71ae6f1d532aa49a61ee7119c42dab, type: 3}
