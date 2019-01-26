@@ -1,39 +1,83 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class KeyMover : MonoBehaviour
+public class KeyMover : FillingBar
 {
+    public GameObject keyHole;
+    public float cooldown;
+
+    bool aiming = true;
+    bool succeeded = false;
     Vector3 currentpos;
     Vector3 dir;
     Vector3 midPoint;
     Vector3 drunkVector;
-
+    Vector3 endPos;
     bool drunkFactor = false;
-    float timer = 0f;
+    float timer1 = 0f;
+    float timer2 = 0f;
     float timeToAddDrunk = 0f;
+    IEnumerator drunk;
 
     void Start()
     {
         Camera cam = Camera.main;
         midPoint = new Vector2(Screen.width / 2, Screen.height / 2);
-        transform.position = new Vector3(Random.Range(-.5f, 1.5f), Random.Range(-.5f, 2f), -.56f);
-        
+        transform.position = new Vector3(Random.Range(-.5f, 1.5f), Random.Range(-.5f, 2f), -.5f);
+        endPos = new Vector3(0, 0, -.139f);
+        StartFill = 0.1f;
     }
 
     void Update()
-    {
-        currentpos = Input.mousePosition;
-        dir = currentpos - midPoint;
-        transform.position += (dir / 5000);
-
-        timer += Time.deltaTime;
-        if (timer >= timeToAddDrunk)
+    {        
+        if (succeeded)
         {
-            StartCoroutine(AddDrunknessFactor());
-            timer = 0f;
-            timeToAddDrunk = Random.Range(1f, 1.5f);
+            if (drunk != null) StopCoroutine(drunk);
+            StartCoroutine(GoToPos(transform.position,endPos,0.1f));
+            succeeded = false;
+            aiming = false;
         }
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -.75f, .75f), Mathf.Clamp(transform.position.y, -.35f, .35f), -.56f);
+        else if(aiming)
+        {
+            currentpos = Input.mousePosition;
+            dir = currentpos - midPoint;
+            Vector3 dis = transform.position - keyHole.transform.position;
+            transform.position += (dir / 5000);
+
+            timer1 += Time.deltaTime;
+            timer2 += Time.deltaTime;
+
+            if (dis.magnitude <= 0.1f)
+            {
+                Bar.fillAmount += 1f * Time.deltaTime;
+            }
+            else Bar.fillAmount -= 0.5f * Time.deltaTime;
+
+            if (Input.GetMouseButton(0) && timer2 >= cooldown && !succeeded)
+            {
+                Debug.Log("Attempting to open door");
+                timer2 = 0f;
+                if (dis.magnitude <= 0.1f && Bar.fillAmount == 1f)
+                {
+                    Debug.Log("Succeeded");
+                    succeeded = true;
+                }
+                else
+                {
+                    Debug.Log("Moin");
+                    if (drunk != null) StopCoroutine(drunk);
+                    StartCoroutine(GoToPos(transform.position, new Vector3(transform.position.x, transform.position.y, -0.4f), .1f, GoToPos(transform.position, new Vector3(transform.position.x, transform.position.y, -.5f), .1f)));
+                }
+            }
+            if (timer1 >= timeToAddDrunk)
+            {
+                drunk =AddDrunknessFactor();
+                StartCoroutine(drunk);
+                timer1 = 0f;
+                timeToAddDrunk = Random.Range(1f, 1.5f);
+            }
+            transform.position = new Vector3(Mathf.Clamp(transform.position.x, -.75f, .75f), Mathf.Clamp(transform.position.y, -.35f, .35f), -0.5f);
+        }
     }
 
     Vector3 CreateRandomVector(float z)
@@ -58,4 +102,20 @@ public class KeyMover : MonoBehaviour
         }
     }
 
+    IEnumerator GoToPos(Vector3 start, Vector3 end, float time, IEnumerator callback = null)
+    {
+
+        float progress = 0f;
+        float t = 0f;
+        
+        while (progress < 1f)
+        {
+            transform.position = Vector3.Lerp(start, end, progress);
+            t += Time.deltaTime;
+            progress = t / time;
+
+            yield return null;
+        }
+        yield return callback == null ? null : StartCoroutine(callback);
+    }
 }
