@@ -4,15 +4,36 @@ using UnityEngine;
 
 public class AnimationController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Animator animator;
+    private int walkRightID;
+    private int walkLeftID;
+
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
+
+        walkRightID = Animator.StringToHash("isWalkingRight");
+        walkLeftID = Animator.StringToHash("isWalkingLeft");
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKey(KeyCode.D))
+        {
+            animator.SetBool(walkRightID, true);
+        }
+        else
+        {
+            animator.SetBool(walkRightID, false);
+        }
+
+        if (Input.GetKey(KeyCode.A))
+        {
+            animator.SetBool(walkLeftID, true);
+        }
+        else
+        {
+            animator.SetBool(walkLeftID, false);
+        }
     }
 }

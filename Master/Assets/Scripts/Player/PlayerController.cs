@@ -12,15 +12,18 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     private Vector3 speed;
     private Collider crouchCollider;
+    private SpriteRenderer spriteRenderer;
 
     private float inputX;
     private float inputZ;
     private float speedBackup;
+    private bool isLookingRight;
     public bool isCrouching;
 
     void Start()
     {
         //animator = GetComponent<Animator>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         rb = GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
 
@@ -32,6 +35,20 @@ public class PlayerController : MonoBehaviour
         speed = new Vector3(inputX * AccelerationSpeed, rb.velocity.y, inputZ * AccelerationSpeed);
         //rb.AddForce(speed);
         rb.velocity = speed;
+    }
+
+    private void ChangeDirection()
+    {
+        isLookingRight = !isLookingRight;
+
+        if (isLookingRight && inputX > 0)
+        {
+            spriteRenderer.flipX = false;
+        }
+        else if (!isLookingRight && inputX < 0)
+        {
+            spriteRenderer.flipX = true;
+        }
     }
 
     private void Crouch()
@@ -51,6 +68,8 @@ public class PlayerController : MonoBehaviour
     {
         inputX = Input.GetAxisRaw("Horizontal");
         inputZ = Input.GetAxisRaw("Vertical");
+
+        ChangeDirection();
 
         if (Input.GetKeyDown(KeyCode.C) || Input.GetKeyUp(KeyCode.C))
         {
