@@ -7,9 +7,11 @@ public class AnimationController : MonoBehaviour
     private Animator animator;
     private int walkRightID;
     private int walkLeftID;
+    private Rigidbody rb;
 
     void Start()
     {
+        rb = GetComponentInParent<Rigidbody>();
         animator = GetComponent<Animator>();
 
         walkRightID = Animator.StringToHash("isWalkingRight");
@@ -18,7 +20,7 @@ public class AnimationController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.D))
+        if (rb.velocity.x > 0.25f)
         {
             animator.SetBool(walkRightID, true);
         }
@@ -27,7 +29,7 @@ public class AnimationController : MonoBehaviour
             animator.SetBool(walkRightID, false);
         }
 
-        if (Input.GetKey(KeyCode.A))
+        if (rb.velocity.x < -0.25f)
         {
             animator.SetBool(walkLeftID, true);
         }
