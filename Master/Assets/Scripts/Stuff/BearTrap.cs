@@ -9,5 +9,6 @@ public class BearTrap : MonoBehaviour
     {
         OpenTrap.SetActive(false);
         ClosedTrap.SetActive(true);
+        Destroy(this);
     }
 }

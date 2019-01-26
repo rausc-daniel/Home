@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5488780874271861680}
   - component: {fileID: 3437119841520421014}
+  - component: {fileID: 266027344}
   m_Layer: 0
   m_Name: BearTrap
   m_TagString: Untagged
@@ -44,8 +45,22 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 14.271162, y: 4.269599, z: 2.9856813}
-  m_Center: {x: 1.2492981, y: 1.6347995, z: 0.0013178587}
+  m_Size: {x: 14.271163, y: 7.8665013, z: 4.648304}
+  m_Center: {x: 1.2492979, y: 3.4332504, z: -0.22146225}
+--- !u!114 &266027344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264743389133165155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec954ee130086749a190259d2e220db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OpenTrap: {fileID: 2904194935104161914}
+  ClosedTrap: {fileID: 6216456721704992114}
 --- !u!1 &2904194935104161914
 GameObject:
   m_ObjectHideFlags: 0
