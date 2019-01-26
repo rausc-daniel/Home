@@ -5,7 +5,6 @@ public class Clock : MonoBehaviour
 {
     public GameObject MinuteHand;
     public GameObject HourHand;
-    public CurrentTime Current;
     public float FiveMinutes;
 
     private Quaternion minuteStartRot;
@@ -13,9 +12,10 @@ public class Clock : MonoBehaviour
 
     private void Start()
     {
-        Current = new CurrentTime(2, 0);
-        MinuteHand.transform.rotation = Quaternion.Euler(0, 0, -Current.CurrentMinute * 6);
-        HourHand.transform.rotation = Quaternion.Euler(0, 0, -Current.CurrentHour * 30 - Current.CurrentMinute * 0.5f);
+        CurrentTime.CurrentHour = 2;
+        CurrentTime.CurrentMinute = 0;
+        MinuteHand.transform.rotation = Quaternion.Euler(0, 0, -CurrentTime.CurrentMinute * 6);
+        HourHand.transform.rotation = Quaternion.Euler(0, 0, -CurrentTime.CurrentHour * 30 - CurrentTime.CurrentMinute * 0.5f);
         minuteStartRot = MinuteHand.transform.rotation;
         hourStartRot = HourHand.transform.rotation;
         StartCoroutine(Hour());
@@ -42,16 +42,16 @@ public class Clock : MonoBehaviour
 
         minuteStartRot = minuteTargetRot;
         hourStartRot = hourTargetRot;
-        Current.CurrentMinute += 5;
+        CurrentTime.CurrentMinute += 5;
 
-        if (Current.CurrentMinute == 60)
+        if (CurrentTime.CurrentMinute == 60)
         {
-            Current.CurrentHour++;
-            Current.CurrentMinute = 0;
+            CurrentTime.CurrentHour++;
+            CurrentTime.CurrentMinute = 0;
         }
 
-        if (Current.CurrentHour == 12)
-            Current.CurrentHour = 0;
+        if (CurrentTime.CurrentHour == 12)
+            CurrentTime.CurrentHour = 0;
 
         yield return StartCoroutine(Hour());
     }
