@@ -20,7 +20,7 @@ public class KeyMover : MonoBehaviour
     {
         Camera cam = Camera.main;
         midPoint = new Vector2(Screen.width / 2, Screen.height / 2);
-        transform.position = new Vector3(Random.Range(-1.5f, 1.5f), Random.Range(-1.5f, 2f), -.8f);
+        transform.position = new Vector3(Random.Range(-1.5f, 1.5f), Random.Range(-1.5f, 2f), -.55f);
         
     }
 
@@ -51,7 +51,7 @@ public class KeyMover : MonoBehaviour
         float progress = 0f;
         float t = 0f;
         drunkVector = CreateRandomVector(0f);
-        Debug.Log(drunkVector);
+
         while (progress < 1f)
         {
             Vector3 lerpVec = Vector2.Lerp(new Vector2(transform.position.x, transform.position.y), new Vector2(drunkVector.x, drunkVector.y), progress) / 100;
