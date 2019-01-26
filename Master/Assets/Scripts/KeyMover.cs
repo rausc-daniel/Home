@@ -13,7 +13,6 @@ public class KeyMover : MonoBehaviour
     float timer = 0f;
     float timeToAddDrunk = 0f;
 
-    // Start is called before the first frame update
     void Start()
     {
         Camera cam = Camera.main;
@@ -22,7 +21,6 @@ public class KeyMover : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         currentpos = Input.mousePosition;
