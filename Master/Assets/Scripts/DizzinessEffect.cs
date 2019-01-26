@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
 [ExecuteInEditMode]
@@ -10,6 +9,8 @@ public class DizzinessEffect : MonoBehaviour
     public float Threshold;
 
     private Material mat;
+
+    private string lastKey;
 
     void Awake()
     {
@@ -31,25 +32,29 @@ public class DizzinessEffect : MonoBehaviour
             if(Dizziness < Threshold)
                 Dizziness += Multiplier;
             Rotate(Dizziness);
+            lastKey = "d";
         }
 
         if (Input.GetKey("a"))
         {
-            if (Dizziness > -Threshold)
-                Dizziness -= Multiplier;
-            Rotate(Dizziness);
+            if (Dizziness < Threshold)
+                Dizziness += Multiplier;
+            Rotate(-Dizziness);
+            lastKey = "a";
         }
 
         if (!Input.anyKey)
         {
-            Dizziness = Dizziness > 0.1 ? Dizziness - Multiplier * 2 : Dizziness < -0.1 ? Dizziness + Multiplier * 2 : 0;
-            Rotate(Dizziness);
+            var tmp = Dizziness;
+            tmp = Mathf.Lerp(lastKey == "d" ? tmp : lastKey == "a" ? -tmp : 0, 0, Time.deltaTime);
+            Dizziness = Math.Abs(tmp);
+            Rotate(tmp);
         }
         
     }
 
     void Rotate(float angle)
     {
-        Camera.main.transform.rotation = Quaternion.AngleAxis(Dizziness, Vector3.forward);
+        Camera.main.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 }
