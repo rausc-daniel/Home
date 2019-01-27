@@ -1,11 +1,15 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Clock : MonoBehaviour
 {
     public GameObject MinuteHand;
     public GameObject HourHand;
     public float FiveMinutes;
+    public NavMeshAgent Sister;
+    public GameObject dest1;
+    public GameObject dest2;
 
     private Quaternion minuteStartRot;
     private Quaternion hourStartRot;
@@ -52,6 +56,11 @@ public class Clock : MonoBehaviour
 
         if (CurrentTime.CurrentHour == 12)
             CurrentTime.CurrentHour = 0;
+
+        if (CurrentTime.CurrentHour == 2 && CurrentTime.CurrentMinute == 30)
+        {
+
+        }
 
         yield return StartCoroutine(Hour());
     }
