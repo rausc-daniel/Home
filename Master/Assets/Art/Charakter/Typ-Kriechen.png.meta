@@ -1,7 +1,15 @@
 fileFormatVersion: 2
 guid: 0e2d4b09108bf8f47b283b1b86a39531
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Typ-Kriechen_0
+    21300002: Typ-Kriechen_1
+    21300004: Typ-Kriechen_2
+    21300006: Typ-Kriechen_3
+    21300008: Typ-Kriechen_4
+    21300010: Typ-Kriechen_5
+    21300012: Typ-Kriechen_6
+    21300014: Typ-Kriechen_7
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -31,7 +39,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,7 +48,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -82,11 +90,171 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Typ-Kriechen_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2967.75
+        width: 3543.5
+        height: 989.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5da42e839cb1c2c4cb1baba5d39afddc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Typ-Kriechen_1
+      rect:
+        serializedVersion: 2
+        x: 3543
+        y: 2967.75
+        width: 3543.5
+        height: 989.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80244fc190099e74a8830eb3e6c4e1ba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Typ-Kriechen_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1978.75
+        width: 3543.5
+        height: 989.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f96f5ff29226ad843aa07beeb8c5e774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Typ-Kriechen_3
+      rect:
+        serializedVersion: 2
+        x: 3543
+        y: 1978.75
+        width: 3543.5
+        height: 989.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6fc6e36721c2814daf77278f61f1965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Typ-Kriechen_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 989.75
+        width: 3543.5
+        height: 989.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f6204db7980e484dbd5379127e703c0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Typ-Kriechen_5
+      rect:
+        serializedVersion: 2
+        x: 3543
+        y: 989.75
+        width: 3543.5
+        height: 989.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 225ec0d4f698c43489f57716f02aa730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Typ-Kriechen_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.75
+        width: 3543.5
+        height: 989.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96d6be23e4f25e84aa1b294befd48879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Typ-Kriechen_7
+      rect:
+        serializedVersion: 2
+        x: 3543
+        y: 0.75
+        width: 3543.5
+        height: 989.25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee5691e3ecb9964287fb2a7bd3d2904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5ea77a325f90b3c4cb22e09a65e83f39
     vertices: []
     indices: 
     edges: []

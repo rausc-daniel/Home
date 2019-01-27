@@ -18,4 +18,9 @@ public class PukeBar : FillingBar
     {
         Bar.fillAmount += amount;
     }
+
+    public void ResetBar()
+    {
+        Bar.fillAmount = 0;
+    }
 }

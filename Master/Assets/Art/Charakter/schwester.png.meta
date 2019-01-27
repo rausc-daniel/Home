@@ -1,7 +1,11 @@
 fileFormatVersion: 2
 guid: f525d3521d836384293d5ba02bb64f86
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: schwester_0
+    21300002: schwester_1
+    21300004: schwester_2
+    21300006: schwester_3
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -31,7 +35,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,7 +44,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -82,11 +86,91 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: schwester_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 649
+        height: 2483
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d6d5ba1082aa234690e20d9caddb0ab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: schwester_1
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 0
+        width: 649
+        height: 2483
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a46114f8195b1b84b93267947c7559fa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: schwester_2
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 0
+        width: 649
+        height: 2483
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 350ad76c330e4524e8a51d6890b1e4bc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: schwester_3
+      rect:
+        serializedVersion: 2
+        x: 1947
+        y: 0
+        width: 649
+        height: 2483
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dde3a8fcf35a1a43800b1d23c7fd386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 53aedd04db50639419b2e3bf046760be
     vertices: []
     indices: 
     edges: []
