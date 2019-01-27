@@ -2,7 +2,6 @@
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-// ICH MÖCHTE NICHT NACH OBEN FLIEGEN
 public class PlayerController : MonoBehaviour
 {
     [Range(0, 15)] public float AccelerationSpeed;
@@ -10,9 +9,12 @@ public class PlayerController : MonoBehaviour
     [Range(0, 10)] public float CrouchSpeed;
     [Range(0, 100)] public float Drunkness;
 
+    public LayerMask layerMask;
     private Rigidbody rb;
-    private Vector3 speed;
     private Collider crouchCollider;
+    private SpriteRenderer spriteRenderer;
+    private Collider collider;
+    private Vector3 speed;
 
     private float inputX;
     private float inputZ;
@@ -22,8 +24,6 @@ public class PlayerController : MonoBehaviour
     private float time;
     public float timeToAddDrunk = 1.25f;
     public int walkingSpeed;
-
-    private SpriteRenderer spriteRenderer;
 
     public GameObject GameOverScreen;
 
@@ -36,17 +36,39 @@ public class PlayerController : MonoBehaviour
 
         speedBackup = AccelerationSpeed;
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+
+        collider = GetComponent<Collider>();
+
         GameOverScreen.SetActive(false);
     }
 
     private void Move()
     {
         speed = new Vector3(inputX * AccelerationSpeed, rb.velocity.y, inputZ * AccelerationSpeed);
-        rb.AddForce(speed.normalized * walkingSpeed);
+        rb.AddForce(speed);
         //rb.velocity = new Vector3(Mathf.Clamp(rb.velocity.x, -2.5f,2.5f ),0, Mathf.Clamp(rb.velocity.z,-2.5f,2.5f));
         //rb.velocity = 0.1f * speed * current;
     }
 
+    private void SlopeDetection()
+    {
+        float angle;
+        RaycastHit hit;
+
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, 1.2f, layerMask))
+        {
+            angle = Mathf.Abs((Mathf.Atan2(hit.normal.x, hit.normal.y) * Mathf.Rad2Deg));
+            // slide
+            if (angle > 46)
+            { }
+            // stabilize
+            else if (angle < 46)
+            {
+                rb.AddExplosionForce(3, collider.bounds.min, 1);
+            }
+        }
+    }
+    
     //private void ChangeDirection()
     //{
     //    isLookingRight = !isLookingRight;
@@ -76,12 +98,14 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        SlopeDetection();
+
         inputX = Input.GetAxisRaw("Horizontal");
         inputZ = Input.GetAxisRaw("Vertical");
 
         //ChangeDirection();
 
-        if (Input.GetKeyDown(KeyCode.C) || Input.GetKeyUp(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyUp(KeyCode.LeftControl))
         {
             Crouch();
         }
