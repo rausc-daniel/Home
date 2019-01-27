@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.Experimental.XR;
 
 public class Wall : MonoBehaviour
 {
@@ -13,13 +12,12 @@ public class Wall : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other is BoxCollider) return;
+        Debug.Log("Enter du huso");
         mat.color = new Color(mat.color.r, mat.color.g, mat.color.b, 0.00001f);
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other is BoxCollider) return;
         mat.color = new Color(mat.color.r, mat.color.g, mat.color.b, 1f);
     }
 }
