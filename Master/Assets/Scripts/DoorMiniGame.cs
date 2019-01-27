@@ -16,6 +16,7 @@ public class DoorMiniGame : MonoBehaviour
     void Start()
     {
         ActivateDoor();
+        //DoorOpened();
     }
 
     public void ActivateDoor()
@@ -27,7 +28,7 @@ public class DoorMiniGame : MonoBehaviour
         mainCam = Camera.main;
         mainCam.tag = "Respawn";
         doorCam.tag = "MainCamera";
-  
+
     }
 
     public void DoorOpened()
