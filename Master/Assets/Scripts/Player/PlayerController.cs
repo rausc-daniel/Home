@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -27,6 +25,10 @@ public class PlayerController : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
 
+    public GameObject GameOverScreen;
+
+    public bool hasCrowbar = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -34,6 +36,7 @@ public class PlayerController : MonoBehaviour
 
         speedBackup = AccelerationSpeed;
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        GameOverScreen.SetActive(false);
     }
 
     private void Move()
@@ -117,5 +120,11 @@ public class PlayerController : MonoBehaviour
 
             yield return null;
         }
+    }
+
+    public void Die()
+    {
+        GameOverScreen.SetActive(true);
+        Time.timeScale = 0;
     }
 }
