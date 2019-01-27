@@ -12,7 +12,7 @@ public class BearTrap : MonoBehaviour
         if (controller)
         {
             OpenTrap.SetActive(false);
-            ClosedTrap.SetActive(true);
+            ClosedTrap.SetActive(true);            
             Destroy(this);
             if (!controller.hasCrowbar)
                 controller.Die();
