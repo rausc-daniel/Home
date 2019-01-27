@@ -11,11 +11,13 @@ public class AnimationController : MonoBehaviour
     private int crouchRightID;
     private int crouchLeftID;
     private Rigidbody rb;
+    private GameObject player;
 
     void Start()
     {
         rb = GetComponentInParent<Rigidbody>();
         animator = GetComponent<Animator>();
+        player = FindObjectOfType<AnimationController>().gameObject;
 
         walkRightID = Animator.StringToHash("isWalkingRight");
         walkLeftID = Animator.StringToHash("isWalkingLeft");
@@ -43,6 +45,17 @@ public class AnimationController : MonoBehaviour
         else
         {
             animator.SetBool(walkRightID, false);
+            animator.SetBool(crouchRightID, false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            animator.SetBool(crouchRightID, true);
+            animator.SetBool(crouchLeftID, false);
+        }
+        else if (Input.GetKeyDown(KeyCode.A))
+        {
+            animator.SetBool(crouchLeftID, true);
             animator.SetBool(crouchRightID, false);
         }
 
