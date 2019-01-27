@@ -16,7 +16,7 @@ public class DoorMiniGame : MonoBehaviour
     void Start()
     {
         ActivateDoor();
-        DoorOpened();
+        //DoorOpened();
     }
 
     public void ActivateDoor()
