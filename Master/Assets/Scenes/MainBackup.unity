@@ -668,7 +668,7 @@ Transform:
   - {fileID: 397631778}
   - {fileID: 1705956961}
   m_Father: {fileID: 619053881}
-  m_RootOrder: 14
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &179410206 stripped
 Transform:
@@ -1595,9 +1595,9 @@ Transform:
   - {fileID: 670715424}
   - {fileID: 1721282367}
   - {fileID: 1352899538}
+  - {fileID: 135135827}
   - {fileID: 1393405004}
   - {fileID: 179410206}
-  - {fileID: 135135827}
   m_Father: {fileID: 0}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3425,8 +3425,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 35.06443, y: 12.188038, z: 11.687657}
-  m_Center: {x: 6.819362, y: 1.1388149, z: 5.016432}
+  m_Size: {x: 35.06443, y: 12.188038, z: 10.338336}
+  m_Center: {x: 6.819362, y: 1.1388149, z: 4.341772}
 --- !u!1 &1105501180 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100054, guid: 3473ea537f734ea4ead8d851a6afc852,
@@ -4428,7 +4428,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 50
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
