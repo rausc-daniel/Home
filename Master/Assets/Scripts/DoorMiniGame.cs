@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public delegate void OnLockFinished();
@@ -18,6 +16,7 @@ public class DoorMiniGame : MonoBehaviour
     void Start()
     {
         ActivateDoor();
+        DoorOpened();
     }
 
     public void ActivateDoor()
