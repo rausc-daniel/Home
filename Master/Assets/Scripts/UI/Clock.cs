@@ -16,6 +16,11 @@ public class Clock : MonoBehaviour
 
     private void Start()
     {
+        DoorMiniGame.onLockFinished += () => { Init(); };
+    }
+
+    private void Init()
+    {
         CurrentTime.CurrentHour = 2;
         CurrentTime.CurrentMinute = 0;
         MinuteHand.transform.rotation = Quaternion.Euler(0, 0, -CurrentTime.CurrentMinute * 6);

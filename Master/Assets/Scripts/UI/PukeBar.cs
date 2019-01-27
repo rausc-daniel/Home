@@ -10,6 +10,7 @@ public class PukeBar : FillingBar
     private void Start()
     {
         GameOverScreen.SetActive(false);
+        DoorMiniGame.onLockFinished += () => Bar.fillAmount = 0;
     }
 
     private void Update()

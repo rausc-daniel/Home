@@ -32,7 +32,12 @@ public class DizzinessEffect : MonoBehaviour
             if(Dizziness < Threshold)
                 Dizziness += Multiplier;
             Rotate(Dizziness);
-            lastKey = "d";
+            if (lastKey == "a")
+            {
+                Dizziness = Mathf.Lerp(Dizziness, -Dizziness, Time.deltaTime/100);
+            }
+            else if (Dizziness < 0)
+                lastKey = "d";
         }
 
         if (Input.GetKey("a"))
@@ -40,7 +45,12 @@ public class DizzinessEffect : MonoBehaviour
             if (Dizziness < Threshold)
                 Dizziness += Multiplier;
             Rotate(-Dizziness);
-            lastKey = "a";
+            if (lastKey == "d")
+            {
+                Dizziness = Mathf.Lerp(Dizziness, -Dizziness, Time.deltaTime/100);
+            }
+            else if(Dizziness < 0)
+                lastKey = "a";
         }
 
         if (!Input.anyKey)
