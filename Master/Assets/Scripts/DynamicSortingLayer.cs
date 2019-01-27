@@ -14,7 +14,7 @@ public class DynamicSortingLayer : MonoBehaviour
             var spriteRenderer = renderers[i];
             if (spriteRenderer.sortingLayerID != id)
                 continue;
-            if (spriteRenderer.GetComponentInParent<PlayerController>() || spriteRenderer.GetComponent<Mudda>())
+            if (spriteRenderer.GetComponentInParent<PlayerController>() || spriteRenderer.GetComponent<Sister>())
                 continue;
             spriteRenderer.sortingOrder = -(int) (spriteRenderer.transform.position.z * 100);
             renderers[i] = spriteRenderer;
