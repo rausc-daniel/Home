@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 
-public class Sister : MonoBehaviour
+public class AgentAnimator : MonoBehaviour
 {
     public NavMeshAgent agent;
     private SpriteRenderer sr;
@@ -17,7 +17,6 @@ public class Sister : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(agent.velocity.x);
         anim.SetBool(walkID, Mathf.Abs(agent.velocity.x) > 0.001f);
 
         if (agent.velocity.x > 0)
