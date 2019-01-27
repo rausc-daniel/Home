@@ -12,7 +12,6 @@ public class Wall : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Enter du huso");
         mat.color = new Color(mat.color.r, mat.color.g, mat.color.b, 0.00001f);
     }
 
