@@ -3720,7 +3720,6 @@ GameObject:
   - component: {fileID: 1302278339}
   - component: {fileID: 1302278340}
   - component: {fileID: 1302278341}
-  - component: {fileID: 1302278342}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3823,18 +3822,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 878572702}
 --- !u!114 &1302278341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1302278335}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d4a9e5db91ccdd4e86be9c03d69d913, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1302278342
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4467,6 +4454,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f14265aa6ae80641addbb26bf23393c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  filter: {fileID: 0}
+  mesh: {fileID: 0}
   removeAditionally:
   - {fileID: 1913795331}
 --- !u!65 &1470257677
@@ -6357,12 +6346,12 @@ PrefabInstance:
     - target: {fileID: 8217553730513982532, guid: 977147c35b240ca4aa27ffa6b3ddbff3,
         type: 3}
       propertyPath: m_SortingLayerID
-      value: -746901899
+      value: -312920123
       objectReference: {fileID: 0}
     - target: {fileID: 8217553730513982532, guid: 977147c35b240ca4aa27ffa6b3ddbff3,
         type: 3}
       propertyPath: m_SortingLayer
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8217553730513982532, guid: 977147c35b240ca4aa27ffa6b3ddbff3,
         type: 3}
@@ -6377,12 +6366,12 @@ PrefabInstance:
     - target: {fileID: 8217553730513982532, guid: 977147c35b240ca4aa27ffa6b3ddbff3,
         type: 3}
       propertyPath: m_SortingLayerID
-      value: -746901899
+      value: -312920123
       objectReference: {fileID: 0}
     - target: {fileID: 8217553730513982532, guid: 977147c35b240ca4aa27ffa6b3ddbff3,
         type: 3}
       propertyPath: m_SortingLayer
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8217553730513982532, guid: 977147c35b240ca4aa27ffa6b3ddbff3,
         type: 3}
