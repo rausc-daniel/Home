@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+//antiproportional fill amount
 public class KeyMover : FillingBar
 {
     public GameObject keyHole;
