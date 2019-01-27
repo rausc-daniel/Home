@@ -1,8 +1,16 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
+using UnityEngine.AI;
 
 public class PukeBar : FillingBar
 {
     public float FillPerFrame;
+    public GameObject GameOverScreen;
+
+    private void Start()
+    {
+        GameOverScreen.SetActive(false);
+    }
 
     private void Update()
     {
@@ -10,7 +18,7 @@ public class PukeBar : FillingBar
 
         if (Bar.fillAmount >= 1)
         {
-            // Penis
+            StartCoroutine(EndGame());
         }
     }
 
@@ -22,5 +30,17 @@ public class PukeBar : FillingBar
     public void ResetBar()
     {
         Bar.fillAmount = 0;
+    }
+
+    IEnumerator EndGame()
+    {
+        GameObject mudda = GameObject.Find("Mudda");
+        PlayerController controller = FindObjectOfType<PlayerController>();
+        mudda.GetComponent<NavMeshAgent>().SetDestination(controller.transform.position);
+        //kotzen
+        yield return new WaitForSeconds(1);
+        yield return new WaitUntil(() => Vector3.Distance(mudda.transform.position, controller.transform.position) < 1f);
+        yield return new WaitForSeconds(1);
+        GameOverScreen.SetActive(true);
     }
 }
