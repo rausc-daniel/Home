@@ -7,6 +7,7 @@ public class BearTrap : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other is BoxCollider) return;
         OpenTrap.SetActive(false);
         ClosedTrap.SetActive(true);
         Destroy(this);

@@ -10,5 +10,6 @@ public class Penis : MonoBehaviour
     {
         player = FindObjectOfType<PlayerController>().gameObject;
         agent.SetDestination(player.transform.position);
+
     }
 }

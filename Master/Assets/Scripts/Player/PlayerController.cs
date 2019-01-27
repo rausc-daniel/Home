@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-// ICH MÖCHTE NICHT NACH OBEN FLIEGEN
 public class PlayerController : MonoBehaviour
 {
     [Range(0, 15)] public float AccelerationSpeed;
