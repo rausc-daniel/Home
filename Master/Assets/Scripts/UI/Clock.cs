@@ -62,9 +62,13 @@ public class Clock : MonoBehaviour
         if (CurrentTime.CurrentHour == 12)
             CurrentTime.CurrentHour = 0;
 
-        if (CurrentTime.CurrentHour == 2 && CurrentTime.CurrentMinute == 30)
+        if (CurrentTime.CurrentMinute == 0 || CurrentTime.CurrentMinute == 30)
         {
-
+            Sister.SetDestination(dest1.transform.position);
+        }
+        if (CurrentTime.CurrentMinute == 15 || CurrentTime.CurrentMinute == 45)
+        {
+            Sister.SetDestination(dest2.transform.position);
         }
 
         yield return StartCoroutine(Hour());

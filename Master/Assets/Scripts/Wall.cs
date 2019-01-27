@@ -18,6 +18,7 @@ public class Wall : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.GetComponent<PlayerController>() == null) return;
         filter.mesh = null;
         foreach (var o in removeAditionally)
             o.SetActive(false);
@@ -25,6 +26,7 @@ public class Wall : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        if (other.GetComponent<PlayerController>() == null) return;
         filter.mesh = mesh;
         foreach (var o in removeAditionally)
             o.SetActive(true);
