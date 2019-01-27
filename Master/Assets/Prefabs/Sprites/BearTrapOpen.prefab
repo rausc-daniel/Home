@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6760759096316497645}
   - component: {fileID: 6760759096316497644}
+  - component: {fileID: 6760759096316497648}
   m_Layer: 0
   m_Name: BearTrapOpen
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 6760759096316497647}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 17.317, y: -0.8, z: -16.1}
-  m_LocalScale: {x: 0.05874344, y: 0.05874344, z: 0.05874344}
+  m_LocalScale: {x: 0.07381113, y: 0.07381113, z: 0.07381113}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -65,10 +66,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bced5af7ee966aa47b64fa95c398e04f, type: 3}
+  m_SortingLayerID: -312920123
+  m_SortingLayer: 1
+  m_SortingOrder: 99
+  m_Sprite: {fileID: 21300000, guid: 6f08a0fece305f84d870e6f0aed1b4d7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -79,3 +80,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6760759096316497648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6760759096316497647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec954ee130086749a190259d2e220db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OpenTrap: {fileID: 6760759096316497647}
+  ClosedTrap: {fileID: 2352683901896058713, guid: a4c32499dd87d4a409a7d6105ef3987e,
+    type: 3}
