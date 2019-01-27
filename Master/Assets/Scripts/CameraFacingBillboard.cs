@@ -6,11 +6,12 @@ public class CameraFacingBillboard : MonoBehaviour
 
     void Start()
     {
-        camera = Camera.main;
+        DoorMiniGame.onLockFinished += () => camera = Camera.main;
     }
 
     void LateUpdate()
     {
+        if(camera != null)
         transform.LookAt(transform.position + camera.transform.rotation * Vector3.forward, camera.transform.rotation * Vector3.up);
     }
 }
