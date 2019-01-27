@@ -41,7 +41,7 @@ public class DoorMiniGame : MonoBehaviour
         mainCam.tag = "MainCamera";
         puke.SetActive(true);
         clock.SetActive(true);
-        onLockFinished.Invoke();
+        onLockFinished?.Invoke();
         Destroy(doorCam.gameObject);
     }
 }
