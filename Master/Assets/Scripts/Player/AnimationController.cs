@@ -12,12 +12,15 @@ public class AnimationController : MonoBehaviour
     private int crouchLeftID;
     private Rigidbody rb;
     private GameObject player;
+    public List<Sprite> crouch;
+    private SpriteRenderer sr;
 
     void Start()
     {
         rb = GetComponentInParent<Rigidbody>();
         animator = GetComponent<Animator>();
         player = FindObjectOfType<AnimationController>().gameObject;
+        sr = GetComponent<SpriteRenderer>();
 
         walkRightID = Animator.StringToHash("isWalkingRight");
         walkLeftID = Animator.StringToHash("isWalkingLeft");
@@ -28,14 +31,18 @@ public class AnimationController : MonoBehaviour
 
     void Update()
     {
+        player.transform.position = crouch.Contains(sr.sprite) ? new Vector3(player.transform.position.x, 1.04f, player.transform.position.z) : new Vector3(player.transform.position.x, 0.5f, player.transform.position.z);
+
         if (Input.GetKeyDown(KeyCode.C))
         {
             animator.SetBool(crouchID, true);
+            player.transform.position = new Vector3(player.transform.position.x, 0.5f, player.transform.position.z);
         }
 
         if (Input.GetKeyUp(KeyCode.C))
         {
             animator.SetBool(crouchID, false);
+            player.transform.position = new Vector3(player.transform.position.x, 1.034f, player.transform.position.z);
         }
         if (rb.velocity.x > 0.25f || Input.GetKey(KeyCode.D))
         {
