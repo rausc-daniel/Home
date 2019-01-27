@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 using Random = UnityEngine.Random;
 
 public class PlayerController : MonoBehaviour
@@ -8,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [Range(0, 10)] public float MaxGroundSpeed;
     [Range(0, 10)] public float CrouchSpeed;
     [Range(0, 100)] public float Drunkness;
+    [Range(0, 1)] public float VignetteValue;
 
     public LayerMask layerMask;
     private Rigidbody rb;
@@ -15,6 +17,8 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Collider collider;
     private Vector3 speed;
+
+    public PostProcessProfile pProfile;
 
     private float inputX;
     private float inputZ;
