@@ -20,7 +20,7 @@ public class AnimationController : MonoBehaviour
 
     void Update()
     {
-        if (rb.velocity.x > 0.25f)
+        if (rb.velocity.x > 0.25f || Input.GetKey(KeyCode.D))
         {
             animator.SetBool(walkRightID, true);
         }
@@ -29,7 +29,7 @@ public class AnimationController : MonoBehaviour
             animator.SetBool(walkRightID, false);
         }
 
-        if (rb.velocity.x < -0.25f)
+        if (rb.velocity.x < -0.25f || Input.GetKey(KeyCode.A))
         {
             animator.SetBool(walkLeftID, true);
         }
