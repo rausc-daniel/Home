@@ -2444,6 +2444,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: house_model
       objectReference: {fileID: 0}
+    - target: {fileID: 100044, guid: 3473ea537f734ea4ead8d851a6afc852, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 3473ea537f734ea4ead8d851a6afc852, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -4048,12 +4052,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1262036292 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4388278746573411316, guid: 7666f97619c6c394eb2368d15076b25d,
-    type: 3}
-  m_PrefabInstance: {fileID: 85466442}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1264781850
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4181,6 +4179,11 @@ PrefabInstance:
       propertyPath: GameOverScreen
       value: 
       objectReference: {fileID: 1005678417}
+    - target: {fileID: 8149019228730455231, guid: 700e66a87fa9fb64196bcaef097ce898,
+        type: 3}
+      propertyPath: FillPerFrame
+      value: 0.0001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 700e66a87fa9fb64196bcaef097ce898, type: 3}
 --- !u!1 &1290304294 stripped
@@ -5597,7 +5600,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1568716499
 Transform:
   m_ObjectHideFlags: 0
@@ -5606,7 +5609,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1568716498}
   m_LocalRotation: {x: 0.270883, y: 0.6531634, z: -0.270883, w: 0.6531634}
-  m_LocalPosition: {x: 0.9499998, y: 1.49, z: 1.2750001}
+  m_LocalPosition: {x: 0.9499998, y: 1.79, z: 1.2750001}
   m_LocalScale: {x: 1, y: 1, z: 0.99999976}
   m_Children: []
   m_Father: {fileID: 132647597}
@@ -7043,10 +7046,13 @@ MonoBehaviour:
   MaxGroundSpeed: 3
   CrouchSpeed: 2
   Drunkness: 0
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
   isCrouching: 0
   timeToAddDrunk: 1.25
   walkingSpeed: 30
-  GameOverScreen: {fileID: 1262036292}
+  GameOverScreen: {fileID: 1005678417}
   hasCrowbar: 0
 --- !u!4 &2079094405 stripped
 Transform:

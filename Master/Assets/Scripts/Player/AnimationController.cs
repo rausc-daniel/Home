@@ -31,11 +31,13 @@ public class AnimationController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.C))
         {
             animator.SetBool(crouchID, true);
+            player.transform.position = new Vector3(player.transform.position.x, 0.5f, player.transform.position.z);
         }
 
         if (Input.GetKeyUp(KeyCode.C))
         {
             animator.SetBool(crouchID, false);
+            player.transform.position = new Vector3(player.transform.position.x, 1.034f, player.transform.position.z);
         }
         if (rb.velocity.x > 0.25f || Input.GetKey(KeyCode.D))
         {
