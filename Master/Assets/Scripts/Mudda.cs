@@ -22,5 +22,7 @@ public class Mudda : MonoBehaviour
         {
             sr.flipX = true;
         }
+
+        sr.sortingOrder = -(int) (transform.position.z * 100);
     }
 }

@@ -25,12 +25,15 @@ public class PlayerController : MonoBehaviour
     public float timeToAddDrunk = 1.25f;
     public int walkingSpeed;
 
+    private SpriteRenderer spriteRenderer;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
 
         speedBackup = AccelerationSpeed;
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void Move()
@@ -88,6 +91,8 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(AddDrunknessFactor());
             timeToAddDrunk = Random.Range(1f, 1.5f);
         }
+
+        spriteRenderer.sortingOrder = -(int) (transform.position.z * 100);
     }
 
     void FixedUpdate()
