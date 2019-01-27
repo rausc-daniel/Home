@@ -6387,6 +6387,112 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 791c23b07b6693d428846cd815eea7c2, type: 2}
+    - target: {fileID: 8217553730513982530, guid: 977147c35b240ca4aa27ffa6b3ddbff3,
+        type: 3}
+      propertyPath: crouch.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8217553730513982530, guid: 977147c35b240ca4aa27ffa6b3ddbff3,
+        type: 3}
+      propertyPath: stand.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8217553730513982530, guid: 977147c35b240ca4aa27ffa6b3ddbff3,
+        type: 3}
+      propertyPath: crouch.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 814705d797bfa8247b9945b3059371f9,
+        type: 3}
+    - target: {fileID: 8217553730513982530, guid: 977147c35b240ca4aa27ffa6b3ddbff3,
+        type: 3}
+      propertyPath: crouch.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300002, guid: 814705d797bfa8247b9945b3059371f9,
+        type: 3}
+    - target: {fileID: 8217553730513982530, guid: 977147c35b240ca4aa27ffa6b3ddbff3,
+        type: 3}
+      propertyPath: crouch.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300004, guid: 814705d797bfa8247b9945b3059371f9,
+        type: 3}
+    - target: {fileID: 8217553730513982530, guid: 977147c35b240ca4aa27ffa6b3ddbff3,
+        type: 3}
+      propertyPath: crouch.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300006, guid: 814705d797bfa8247b9945b3059371f9,
+        type: 3}
+    - target: {fileID: 8217553730513982530, guid: 977147c35b240ca4aa27ffa6b3ddbff3,
+        type: 3}
+      propertyPath: crouch.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300008, guid: 814705d797bfa8247b9945b3059371f9,
+        type: 3}
+    - target: {fileID: 8217553730513982530, guid: 977147c35b240ca4aa27ffa6b3ddbff3,
+        type: 3}
+      propertyPath: crouch.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300010, guid: 814705d797bfa8247b9945b3059371f9,
+        type: 3}
+    - target: {fileID: 8217553730513982530, guid: 977147c35b240ca4aa27ffa6b3ddbff3,
+        type: 3}
+      propertyPath: crouch.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300012, guid: 814705d797bfa8247b9945b3059371f9,
+        type: 3}
+    - target: {fileID: 8217553730513982530, guid: 977147c35b240ca4aa27ffa6b3ddbff3,
+        type: 3}
+      propertyPath: crouch.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300014, guid: 814705d797bfa8247b9945b3059371f9,
+        type: 3}
+    - target: {fileID: 8217553730513982530, guid: 977147c35b240ca4aa27ffa6b3ddbff3,
+        type: 3}
+      propertyPath: stand.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 0e2d4b09108bf8f47b283b1b86a39531,
+        type: 3}
+    - target: {fileID: 8217553730513982530, guid: 977147c35b240ca4aa27ffa6b3ddbff3,
+        type: 3}
+      propertyPath: stand.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300002, guid: 0e2d4b09108bf8f47b283b1b86a39531,
+        type: 3}
+    - target: {fileID: 8217553730513982530, guid: 977147c35b240ca4aa27ffa6b3ddbff3,
+        type: 3}
+      propertyPath: stand.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300004, guid: 0e2d4b09108bf8f47b283b1b86a39531,
+        type: 3}
+    - target: {fileID: 8217553730513982530, guid: 977147c35b240ca4aa27ffa6b3ddbff3,
+        type: 3}
+      propertyPath: stand.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300006, guid: 0e2d4b09108bf8f47b283b1b86a39531,
+        type: 3}
+    - target: {fileID: 8217553730513982530, guid: 977147c35b240ca4aa27ffa6b3ddbff3,
+        type: 3}
+      propertyPath: stand.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300008, guid: 0e2d4b09108bf8f47b283b1b86a39531,
+        type: 3}
+    - target: {fileID: 8217553730513982530, guid: 977147c35b240ca4aa27ffa6b3ddbff3,
+        type: 3}
+      propertyPath: stand.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300010, guid: 0e2d4b09108bf8f47b283b1b86a39531,
+        type: 3}
+    - target: {fileID: 8217553730513982530, guid: 977147c35b240ca4aa27ffa6b3ddbff3,
+        type: 3}
+      propertyPath: stand.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300012, guid: 0e2d4b09108bf8f47b283b1b86a39531,
+        type: 3}
+    - target: {fileID: 8217553730513982530, guid: 977147c35b240ca4aa27ffa6b3ddbff3,
+        type: 3}
+      propertyPath: stand.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300014, guid: 0e2d4b09108bf8f47b283b1b86a39531,
+        type: 3}
     m_RemovedComponents:
     - {fileID: 8217553731021930028, guid: 977147c35b240ca4aa27ffa6b3ddbff3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 977147c35b240ca4aa27ffa6b3ddbff3, type: 3}
@@ -6412,6 +6518,9 @@ MonoBehaviour:
   MaxGroundSpeed: 3
   CrouchSpeed: 2
   Drunkness: 0
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
   isCrouching: 0
   timeToAddDrunk: 1.25
   walkingSpeed: 30
