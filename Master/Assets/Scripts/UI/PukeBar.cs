@@ -6,6 +6,8 @@ public class PukeBar : FillingBar
 {
     public float FillPerFrame;
     public GameObject GameOverScreen;
+    public GameObject sound;
+    GameObject go;
     public GameObject dude;
     public GameObject pukeDude;
 
@@ -13,6 +15,7 @@ public class PukeBar : FillingBar
     {
         GameOverScreen.SetActive(false);
         DoorMiniGame.onLockFinished += () => Bar.fillAmount = 0;
+        
     }
 
     private void Update()
@@ -42,6 +45,8 @@ public class PukeBar : FillingBar
 
     IEnumerator EndGame()
     {
+        if (go == null) go = Instantiate(sound);
+
         GameObject mudda = GameObject.Find("Mudda");
         PlayerController controller = FindObjectOfType<PlayerController>();
         mudda.GetComponent<NavMeshAgent>().SetDestination(controller.transform.position);
