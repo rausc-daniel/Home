@@ -3,15 +3,17 @@ using UnityEngine;
 
 public class Wall : MonoBehaviour
 {
-    private MeshFilter filter;
-    private Mesh mesh;
+    public MeshFilter filter;
+    public Mesh mesh;
 
     public GameObject[] removeAditionally;
 
     private void Awake()
     {
-        filter = GetComponent<MeshFilter>();
-        mesh = filter.mesh;
+        if(filter == null)
+            filter = GetComponent<MeshFilter>();
+        if(mesh == null)
+            mesh = filter.mesh;
     }
 
     private void OnTriggerEnter(Collider other)
