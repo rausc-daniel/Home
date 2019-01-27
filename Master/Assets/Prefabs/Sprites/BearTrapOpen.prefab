@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6760759096316497645}
   - component: {fileID: 6760759096316497644}
   - component: {fileID: 6760759096316497648}
+  - component: {fileID: 6760759096316497652}
   m_Layer: 0
   m_Name: BearTrapOpen
   m_TagString: Untagged
@@ -80,7 +81,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6760759096316497648
+--- !u!65 &6760759096316497648
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6760759096316497647}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 22.289999, y: 9.616989, z: 9.362707}
+  m_Center: {x: 0, y: 1.2615093, z: 1.5796144}
+--- !u!114 &6760759096316497652
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,5 +107,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OpenTrap: {fileID: 6760759096316497647}
-  ClosedTrap: {fileID: 2352683901896058713, guid: a4c32499dd87d4a409a7d6105ef3987e,
-    type: 3}
+  ClosedTrap: {fileID: 0}
+  Indicator: {fileID: 0}

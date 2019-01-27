@@ -16,7 +16,7 @@ public class BearTrap : MonoBehaviour
             Destroy(this);
             if (!controller.hasCrowbar)
                 controller.Die();
-            Indicator.SetActive(false);
+            Indicator?.SetActive(false);
         }
     }
 }
