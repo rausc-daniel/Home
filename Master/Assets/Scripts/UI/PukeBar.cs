@@ -6,6 +6,8 @@ public class PukeBar : FillingBar
 {
     public float FillPerFrame;
     public GameObject GameOverScreen;
+    public GameObject dude;
+    public GameObject pukeDude;
 
     private void Start()
     {
@@ -19,7 +21,12 @@ public class PukeBar : FillingBar
 
         if (Bar.fillAmount >= 1)
         {
+            int layer = dude.GetComponent<SpriteRenderer>().sortingOrder;
+            dude.SetActive(false);
+            pukeDude.SetActive(true);
+            pukeDude.GetComponent<SpriteRenderer>().sortingOrder = layer;
             StartCoroutine(EndGame());
+            FindObjectOfType<PlayerController>().enabled = false;
         }
     }
 
