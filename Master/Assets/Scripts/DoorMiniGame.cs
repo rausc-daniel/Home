@@ -12,7 +12,8 @@ public class DoorMiniGame : MonoBehaviour
     public Image bar;
     public Camera mainCam;
     public Camera doorCam;
-
+    public GameObject puke;
+    public GameObject clock;
     void Start()
     {
         ActivateDoor();
@@ -38,7 +39,9 @@ public class DoorMiniGame : MonoBehaviour
         Destroy(key);
         Destroy(bar);
         mainCam.tag = "MainCamera";
-        Destroy(doorCam.gameObject);
+        puke.SetActive(true);
+        clock.SetActive(true);
         onLockFinished.Invoke();
+        Destroy(doorCam.gameObject);
     }
 }
