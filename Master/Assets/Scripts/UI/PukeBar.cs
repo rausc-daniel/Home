@@ -45,10 +45,10 @@ public class PukeBar : FillingBar
         GameObject mudda = GameObject.Find("Mudda");
         PlayerController controller = FindObjectOfType<PlayerController>();
         mudda.GetComponent<NavMeshAgent>().SetDestination(controller.transform.position);
-        //kotzen
         yield return new WaitForSeconds(1);
         yield return new WaitUntil(() => Vector3.Distance(mudda.transform.position, controller.transform.position) < 1f);
         yield return new WaitForSeconds(1);
         GameOverScreen.SetActive(true);
+        FindObjectOfType<SceneChanger>().GoToCreditScene();
     }
 }
