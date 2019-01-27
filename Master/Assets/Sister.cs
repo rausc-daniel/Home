@@ -2,12 +2,12 @@
 
 public class Sister : MonoBehaviour
 {
-    private PukeBar bar;
+    public PukeBar bar;
 
-    private void Start()
-    {
-        bar = FindObjectOfType<PukeBar>();
-    }
+    //private void Start()
+    //{
+    //    bar = FindObjectOfType<PukeBar>();
+    //}
 
     private void OnTriggerStay(Collider other)
     {

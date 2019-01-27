@@ -14,9 +14,9 @@ public class Clock : MonoBehaviour
     private Quaternion minuteStartRot;
     private Quaternion hourStartRot;
 
-    private void Start()
+    private void Awake()
     {
-        DoorMiniGame.onLockFinished += () => { Init(); };
+        DoorMiniGame.onLockFinished += Init;
     }
 
     private void Init()
